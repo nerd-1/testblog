@@ -6,14 +6,18 @@ module.exports = {
   head: [    // 给头文件添加标签
     ['link', {rel:'stylesheet', href:'https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css'}],
     ['link', {rel:'stylesheet', href:'https://gitcdn.xyz/cdn/goessner/markdown-it-texmath/master/texmath.css'}],
-    ['script', {src: 'https://github.com/markdown-it/markdown-it/blob/master/bin/markdown-it.js'}],
-    ['script', {src: 'https://gitcdn.xyz/cdn/goessner/markdown-it-texmath/master/texmath.js'}],
-    ['script', {src: 'https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js'}],
+    ['script', {defer: 'defer', src: 'https://github.com/markdown-it/markdown-it/blob/master/bin/markdown-it.js'}],
+    ['script', {defer: 'defer', src: 'https://gitcdn.xyz/cdn/goessner/markdown-it-texmath/master/texmath.js'}],
+    ['script', {defer: 'defer', src: 'https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js'}],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco', // 主题，怎么配置就不知道了
   themeConfig: {
+    valineConfig:{
+      appId: 'jw1bU1OVro2Y1DakAVG7e5AH-gzGzoHsz',
+      appKey: 'K6OKmDc99qRHpAtDuDfGiuqP'
+    },
     nav: [       // 导航栏
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
@@ -26,7 +30,9 @@ module.exports = {
       { text: 'Contact', 
         icon: 'reco-message',
         items: [
-          { text: 'GitHub', link: 'https://github.com/recoluan', icon: 'reco-github' }
+          { text: 'GitHub', link: 'https://github.com/nerd-1', icon: 'reco-github' },
+          { text: '博客园', link: 'https://www.cnblogs.com/nerd-/', icon: 'reco-bokeyuan' },
+          { text: '码云', link: 'https://gitee.com/nerd', icon: 'reco-mayun' }
         ]
       }
     ],
@@ -56,16 +62,11 @@ module.exports = {
     },
     friendLink: [
       {
-        title: '博客园个人博客',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.cnblogs.com/nerd-/'
-      },
-      {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
+        title: 'vuepress-theme-reco官方文档',
+        desc: 'vuepress-theme-reco的官方文档，以便自己查阅',
+        email: '1904981400@qq.com',
+        link: 'https://vuepress-theme-reco.recoluan.com/views/1.x/valine.html',
+        avatar: "https://vuepress-theme-reco.recoluan.com/favicon.ico",
       },
     ],
     logo: '/logo.png',
