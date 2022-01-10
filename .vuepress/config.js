@@ -2,29 +2,37 @@ module.exports = {
   // 标题
   title: "小默同学的个人博客",   
   description: '社会只有看到辉煌的成就，才能认可你的天才。',  // 描述
-  dest: 'public',   // 静态文件存放的文件夹
-  head: [    // 给头文件添加标签
-    ['link', {rel:'stylesheet', href:'https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css'}],
-    ['link', {rel:'stylesheet', href:'https://gitcdn.xyz/cdn/goessner/markdown-it-texmath/master/texmath.css'}],
-    ['script', {defer: 'defer', src: 'https://github.com/markdown-it/markdown-it/blob/master/bin/markdown-it.js'}],
-    ['script', {defer: 'defer', src: 'https://gitcdn.xyz/cdn/goessner/markdown-it-texmath/master/texmath.js'}],
-    ['script', {defer: 'defer', src: 'https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js'}],
+  // 静态文件存放的文件夹
+  dest: 'public',  
+  // 给头文件添加标签
+  head: [    
+    ['link', {rel:'stylesheet', href:'/css/katex.min.css'}],
+    ['link', {rel:'stylesheet', href:'/css/texmath.css'}],
+    ['link', {rel:'stylesheet', href:'/css/custom.css'}],
+    ['script', {defer: 'defer', src: '/js/markdown-it.js'}],
+    ['script', {defer: 'defer', src: '/js/texmath.js'}],
+    ['script', {defer: 'defer', src: '/js/katex.min.js'}],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco', // 主题，怎么配置就不知道了
   themeConfig: {
+    // 深度
+    sidebarDepth: 2,
+    // 评论功能valine
     valineConfig:{
       appId: 'jw1bU1OVro2Y1DakAVG7e5AH-gzGzoHsz',
       appKey: 'K6OKmDc99qRHpAtDuDfGiuqP'
     },
-    nav: [       // 导航栏
+    // 导航栏
+    nav: [       
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
       { text: 'Docs', 
         icon: 'reco-message',
         items: [
-          { text: 'vuepress-reco', link: '/docs/theme-reco/' }
+          // { text: 'vuepress-reco', link: '/docs/theme-reco/' },
+          { text: '组成原理', link: '/docs/zuchengyuanli/' }
         ]
       },
       { text: 'Contact', 
@@ -37,17 +45,32 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/docs/theme-reco/': [
-        '',   // README.md
-        'theme',  // 文件名，省略.md
-        'plugin',
-        'api'
-      ],
-      '/blogs/frontend/':[
+      // 写文件名而不是标题名
+      // 可以数字开头但是不能是中文
+      // '/docs/theme-reco/': [
+      //   '',   // README.md
+      //   'theme',  // 文件名，省略.md
+      //   'plugin',
+      //   'api'
+      // ],
+      '/docs/zuchengyuanli/':[
         '',
-        'vuepress111',
       ]
     },  
+    // sidebar: [
+    //   {
+    //     title: 'theme-reco',
+    //     path: '/docs/theme-reco/',
+    //     siderbarDepth: 1,
+    //     children: []
+    //   },
+    //   {
+    //     title: '组成原理',
+    //     path: '/docs/zuchengyuanli/',
+    //     siderbarDepth: 1,
+    //     children: []
+    //   },
+    // ],
     type: 'blog',
     // 博客设置
     blogConfig: {
@@ -73,8 +96,6 @@ module.exports = {
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
-    // 自动形成侧边导航
-    // sidebar: 'auto',
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
@@ -107,9 +128,13 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     anchor: { permalink: false },
-    toc: {includeLevel: [1,2]},
+    toc: {includeLevel: [1,2,3,4,5,6]},
     extendMarkdown: md => {
       md.use(require('markdown-it-texmath'))
     }
   }
 }  
+
+/*
+docs里面必须要有个README.md
+*/
