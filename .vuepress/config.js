@@ -1,3 +1,12 @@
+/*
+这个文件怎么用？我怕我忘记
+
+1. 导航栏nav里面可以新建教程。注意路径要是英文。
+2. 每新建一个教程要在sidebar下面注册才能显示。
+3. friendLink下面可以添加友链。
+*/
+
+
 module.exports = {
   // 标题
   title: "小默同学的个人博客",   
@@ -8,7 +17,7 @@ module.exports = {
   head: [    
     ['link', {rel:'stylesheet', href:'/css/katex.min.css'}],
     ['link', {rel:'stylesheet', href:'/css/texmath.css'}],
-    ['link', {rel:'stylesheet', href:'/css/custom.css'}],
+    ['link', {rel:'stylesheet', href:'/css/custom.css'}],  // 自定义的css
     ['script', {defer: 'defer', src: '/js/markdown-it.js'}],
     ['script', {defer: 'defer', src: '/js/texmath.js'}],
     ['script', {defer: 'defer', src: '/js/katex.min.js'}],
@@ -32,7 +41,8 @@ module.exports = {
         icon: 'reco-message',
         items: [
           // { text: 'vuepress-reco', link: '/docs/theme-reco/' },
-          { text: '组成原理', link: '/docs/zuchengyuanli/' }
+          { text: '组成原理', link: '/docs/zuchengyuanli/' },
+          { text: 'photoshop', link: '/docs/ps/' }
         ]
       },
       { text: 'Contact', 
@@ -54,6 +64,9 @@ module.exports = {
       //   'api'
       // ],
       '/docs/zuchengyuanli/':[
+        '',
+      ],
+      'docs/ps/': [
         '',
       ]
     },  
