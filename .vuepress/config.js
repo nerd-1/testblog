@@ -69,6 +69,7 @@ module.exports = {
       '/docs/ps/': [
         '',
         'one',
+        'two',
       ]
     },  
     // sidebar: [
