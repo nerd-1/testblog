@@ -6,8 +6,8 @@ categories:
   - test
 tags:
   - test
-publish: false
+publish: true
 sticky: 1
 ---
 
-This is theme-reco.
+This is theme-reco.  two
