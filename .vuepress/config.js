@@ -68,6 +68,7 @@ module.exports = {
       ],
       '/docs/ps/': [
         '',
+        'one',
       ]
     },  
     // sidebar: [
