@@ -66,7 +66,7 @@ module.exports = {
       '/docs/zuchengyuanli/':[
         '',
       ],
-      'docs/ps/': [
+      '/docs/ps/': [
         '',
       ]
     },  
