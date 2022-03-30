@@ -43,7 +43,7 @@ module.exports = {
           // { text: 'vuepress-reco', link: '/docs/theme-reco/' },
           { text: '组成原理', link: '/docs/zuchengyuanli/' },
           { text: 'photoshop', link: '/docs/ps/' },
-          { text: 'MathModel', link: '/docs/MathModel'}
+          { text: '数学建模', link: '/docs/MathModel'}
         ]
       },
       { text: 'Contact', 
