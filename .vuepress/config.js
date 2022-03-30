@@ -10,7 +10,7 @@
 module.exports = {
   // 标题
   title: "小默同学的个人博客",   
-  description: '社会只有看到辉煌的成就，才能认可你的天才。',  // 描述
+  description: '世上无难事，只怕有心人',  // 描述
   // 静态文件存放的文件夹
   dest: 'public',  
   // 给头文件添加标签
@@ -42,7 +42,8 @@ module.exports = {
         items: [
           // { text: 'vuepress-reco', link: '/docs/theme-reco/' },
           { text: '组成原理', link: '/docs/zuchengyuanli/' },
-          { text: 'photoshop', link: '/docs/ps/' }
+          { text: 'photoshop', link: '/docs/ps/' },
+          { text: 'MathModel', link: '/docs/MathModel'}
         ]
       },
       { text: 'Contact', 
@@ -68,8 +69,10 @@ module.exports = {
       ],
       '/docs/ps/': [
         '',
-        'one',
-        'two',
+      ],
+      '/docs/MathModel' : [
+        '',
+        '01-letter'
       ]
     },  
     // sidebar: [

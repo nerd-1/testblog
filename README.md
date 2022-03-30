@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 小默同学的个人博客
-tagline: 社会只有看到辉煌的成就，才能认可你的天才。
+tagline: 世上无难事，只怕有心人。
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
